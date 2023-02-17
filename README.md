@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @jks403
-- 👀 I’m interested in ...
-- 🌱 I’m currently revisiting my C++
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 👀 I’m interested in Full stack development from the Entity relationship diagrams to the application layer
+- 🌱 I’m currently revisiting my C++, Javascript, SQL, MS Access database development, etc
+- 💞️ I’m looking to collaborate on applications that optimize orgaization's posture enabling them to prosper and thrive for many years to come
+- 📫 How to reach me: jks403@humboldt.edu
 
 <!---
 jks403/jks403 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
