@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @jks403
 - 👀 I’m interested in Full stack development from the Entity relationship diagrams to the application layer
-- 🌱 I’m currently revisiting my C++, Javascript, SQL, MS Access database development, etc
+- 🌱 I’m currently developing C++, Javascript, SQL, Jquery, Node.Js, Python applications and hosting on my own server @ joshuakane.net
 - 💞️ I’m looking to collaborate on applications that optimize orgaization's posture enabling them to prosper and thrive for many years to come
 - 📫 How to reach me: jks403@humboldt.edu
 
