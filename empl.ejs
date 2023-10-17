@@ -1,0 +1,63 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1> <%= emplTitle %> </h1>
+  </div>
+
+  <div class="box">
+
+
+  <%  newListItems.forEach(function(item){ %>
+
+    <form action="/delete" method="post">
+      <div class="item">
+        <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+        <p><%=item.name%></p>
+      </div>
+      <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+    </form>
+  <%  }) %>
+
+
+  <div class="container">
+    <form method="post" action="/create_patient_services">       <!-- WE must send the all of the form information here to itself to the top of the code-->   
+      
+      <div class="form-group row">
+        <label for="empl_name" class="col-sm-2 col-form-label">empl_name</label>   <!-- sending the title to the top of this code --> 
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="empl_name" name="empl_name" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="dept_no" class="col-sm-2 col-form-label">dept_no</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="dept_no" name="dept_no" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="dept_name" class="col-sm-2 col-form-label">dept_name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="dept_name" name="dept_name" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="empl_title" class="col-sm-2 col-form-label">empl_title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="empl_title" name="empl_title" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="empl_loc" class="col-sm-2 col-form-label">empl_loc </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="empl_loc" name="empl_loc" value="">
+        </div>
+      </div>
+
+      <button type="submit" name="addemplRecord" class="btn btn-success">Add Employee</button>
+
+    </form>
+  </div>
+
+  </div>
+
+<%- include("footer") -%>
