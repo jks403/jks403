@@ -39,3 +39,31 @@ inquirer
       // Something else went wrong
     }
   });
+
+
+================================================================================
+first name with fs.Writefile
+
+
+const message = 'Hello world' // Try edit me
+
+// Update header text
+import inquirer from 'inquirer';
+import fs from 'fs';
+document.querySelector('#header').innerHTML = message
+
+import.prompt([
+  {
+  "message" : "enter in your first name",
+  "name" : "f_name",
+  }
+])
+.then((answers)  =>  {
+  const first_name = answers.f_name;
+
+  fs.writeFile("name.txt", first_name);
+  fs.writeFile("Your first name is " + first_name);
+});
+
+// Log to console
+console.log(message);
