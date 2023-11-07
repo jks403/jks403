@@ -45,25 +45,40 @@ inquirer
 first name with fs.Writefile
 
 
-const message = 'Hello world' // Try edit me
-
-// Update header text
 import inquirer from 'inquirer';
+import qr from "qr-image";
 import fs from 'fs';
-document.querySelector('#header').innerHTML = message
 
-import.prompt([
-  {
-  "message" : "enter in your first name",
-  "name" : "f_name",
-  }
-])
-.then((answers)  =>  {
-  const first_name = answers.f_name;
+inquirer
+  .prompt([
+    /* Pass your questions in here */  
+    { 
+        "message": "Type in your first_name: ", 
+        "name" : "f_name" ,        
+        
+    },
+  ])
+  
+  .then((answers) => {     
+    // Use user feedback for... whatever!!
+    
+    const first_name = answers.f_name;
+    //var qr_svg = qr.image(url);
+    //qr_svg.pipe(fs.createWriteStream("qr_img.png"));  
+    fs.writeFile("name.txt", "your first name is " + first_name, (err) => {
+      if(err) throw err;
+      console.log("your name is " + first_name);
+    });
+    
+      
+  })
+    
+  
 
-  fs.writeFile("name.txt", first_name);
-  fs.writeFile("Your first name is " + first_name);
-});
-
-// Log to console
-console.log(message);
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
