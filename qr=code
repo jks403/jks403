@@ -82,3 +82,22 @@ inquirer
       // Something else went wrong
     }
   });
+
+====================================================
+filename writing and reading to 
+
+const fs = require("fs");
+
+/* fs.writeFile("message.txt", "Hellow from NodeJS", (err)  => {
+    if(err) throw err;
+    console.log('the file has been saved');
+});  */
+
+
+
+
+fs.readFile("./message.txt", 'utf8',  (err, data) => {
+    if(err) throw err;
+    console.log(data);
+});
+
